@@ -34,7 +34,7 @@ public class DoctorEntity {
 	private Specialization specialization;
 
 	// Two direction
-	@OneToMany(mappedBy = "doctor", orphanRemoval = true, fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "doctor", orphanRemoval = true, fetch = FetchType.EAGER)
 	private Collection<VisitEntity> visits;
 
 	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
